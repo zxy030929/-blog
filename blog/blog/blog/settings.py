@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4i&fcqdrehr!q+=lg@!-!xq(t$-dvyo1oihdr361hazyrdyxap'
+SECRET_KEY = '1l9@lw5d-68lylf9pzmey+!hy$a=cwa#q6314!1-q=!d_-g-oo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -73,11 +73,15 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
+DDATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql', # 数据库引擎
+        'HOST': '127.0.0.1', # 数据库主机
+        'PORT': 3306, # 数据库端口
+        'USER': 'itheima', # 数据库用户名
+        'PASSWORD': '123456', # 数据库用户密码
+        'NAME': 'itheima_blog' # 数据库名字
+    },
 }
 
 
